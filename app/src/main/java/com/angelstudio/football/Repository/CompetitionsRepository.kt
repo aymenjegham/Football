@@ -1,11 +1,14 @@
 package com.angelstudio.football.Repository
 
-import androidx.lifecycle.LiveData
+
+import com.angelstudio.football.Model.Competition
 import com.angelstudio.football.Model.Competitions
+
+import io.reactivex.Observable
+
 
 interface CompetitionsRepository {
 
-    suspend fun getCompetitions(): LiveData<Competitions>
-    suspend fun fetch(plan :String)
+  fun getCompetitions(): Observable<Competitions>
 
 }

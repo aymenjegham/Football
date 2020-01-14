@@ -27,7 +27,6 @@ buildscript {
         stetho = '1.5.1'
         timberVersion = '4.7.1'
         daggerVersion = '2.25.2'
-        kodein_version = '5.2.0'
 
         // Testing dependencies
         junitVersion = '4.12'
