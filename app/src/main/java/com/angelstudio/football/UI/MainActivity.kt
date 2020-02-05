@@ -2,15 +2,13 @@ package com.angelstudio.football.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import com.angelstudio.football.Model.Status
+import androidx.navigation.NavController
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.angelstudio.football.R
-import com.angelstudio.football.UI.Competitions.CompetitionsFragment
-import com.angelstudio.football.UI.Competitions.CompetitionsViewModel
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -30,34 +28,19 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         return dispatchingAndroidInjector
     }
 
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val mainViewModel = ViewModelProviders.of(this, viewModelFactory)[CompetitionsViewModel::class.java]
-        mainViewModel.competitionsLiveData.observe(
-            this,
-            Observer { cats ->
-                cats?.also {
-                    when (it.status) {
-                        Status.LOADING -> {
-                            Log.v("checkingonresults","activity loading   ")
 
-                        }
-                        Status.SUCCESS -> {
-                            Log.v("checkingonresults","activity success    "+it.toString())
+        navController = findNavController(R.id.nav_fragment)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
 
-                        }
-                        Status.ERROR -> {
-                            Log.v("checkingonresults","activity error   ")
 
-                        }
-                    }
-                }
-            })
-    }
-
-    private fun displayfragment() {
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
 
     }

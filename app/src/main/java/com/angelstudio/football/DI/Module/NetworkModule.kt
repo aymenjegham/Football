@@ -2,6 +2,7 @@ package com.angelstudio.football.DI.Module
 
 import android.util.Log
 import com.angelstudio.football.BuildConfig
+import com.angelstudio.football.Service.FootballService
 import com.angelstudio.football.Util.scheduler.SchedulerProvider
 import dagger.Module
 import dagger.Provides
@@ -25,9 +26,11 @@ class NetworkModule {
         const val CONNECT_TIMEOUT: Long = 60
         const val READ_TIMEOUT: Long = 60
         const val WRITE_TIMEOUT: Long = 60
-        const val API_KEY = BuildConfig.API_DEVELOPER_FOOTBALL
+        const val API_KEY = BuildConfig.API_KEY
 
     }
+
+
 
     @Provides
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
@@ -79,6 +82,9 @@ class NetworkModule {
             .client(httpClient)
             .build()
     }
+
+
+
 
 
 }

@@ -3,13 +3,15 @@ package com.angelstudio.football.UI.Competitions
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.angelstudio.football.Model.Competition
+import androidx.lifecycle.liveData
 import com.angelstudio.football.Model.Competitions
 import com.angelstudio.football.Model.Resource
 import com.angelstudio.football.Repository.CompetitionsRepository
 import com.avi5hek.purrfectapp.base.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+
+
 import javax.inject.Inject
 
 
@@ -18,13 +20,14 @@ class CompetitionsViewModel
     constructor(private val competitionsRepository: CompetitionsRepository) :BaseViewModel(){
 
 
-    val competitionsLiveData = MutableLiveData<Resource<Competitions>>()
+    var competitionsLiveData = MutableLiveData<Resource<Competitions>>()
 
 
 
 
 
     init {
+
         competitionsRepository.getCompetitions()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -35,7 +38,6 @@ class CompetitionsViewModel
             .subscribe(
                 {
 
-                    Log.v("checkingonresults","VM"+it.competitions[0].name)
 
                     competitionsLiveData.value = Resource.success(it)
                 },

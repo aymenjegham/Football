@@ -8,5 +8,13 @@
     <fragment
         android:id="@+id/competitionsFragment"
         android:name="com.angelstudio.football.UI.Competitions.CompetitionsFragment"
-        android:label="CompetitionsFragment" />
+        android:label="CompetitionsFragment" >
+        <action
+            android:id="@+id/action_competitionsFragment_to_competitionFragment"
+            app:destination="@id/competitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/competitionFragment"
+        android:name="com.angelstudio.football.UI.Competitions.CompetitionFragment"
+        android:label="CompetitionFragment" />
 </navigation>
