@@ -15,7 +15,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.angelstudio.football.Model.Status
 import com.angelstudio.football.R
@@ -71,6 +71,9 @@ class CompetitionsFragment : Fragment() {
 
         floatingActionButton1.setOnClickListener {
 
+
+            val actionDetail = CompetitionsFragmentDirections.actionCompetitionsFragmentToCompetitionFragment()
+            Navigation.findNavController(view!!).navigate(actionDetail)
 
 
         }
