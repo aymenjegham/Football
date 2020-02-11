@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.Competition.competitionFragment">
+    tools:context=".UI.Team.TeamFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Competition fragment" />
+        android:text="Team Fragment" />
 
 </FrameLayout>

@@ -6,9 +6,7 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 
-/**
- * Provides different types of schedulers specific to Android framework.
- */
+
 class AndroidSchedulerProvider
 @Inject
 constructor() : SchedulerProvider {

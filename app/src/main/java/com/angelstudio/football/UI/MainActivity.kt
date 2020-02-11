@@ -36,8 +36,6 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-        toolbar.setNavigationOnClickListener { onBackPressed() }
 
         navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_fragment) as NavHostFragment? ?: return
 

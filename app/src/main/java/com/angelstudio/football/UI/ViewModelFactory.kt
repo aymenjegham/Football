@@ -1,4 +1,4 @@
-package com.angelstudio.football.UI.Competitions
+package com.angelstudio.football.UI
 
 
 import androidx.lifecycle.ViewModel

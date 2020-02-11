@@ -2,6 +2,7 @@
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/competitionsFragment">
 
@@ -12,9 +13,25 @@
         <action
             android:id="@+id/action_competitionsFragment_to_competitionFragment"
             app:destination="@id/competitionFragment" />
+        <action
+            android:id="@+id/action_competitionsFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
+        <action
+            android:id="@+id/action_competitionsFragment_to_teamFragment"
+            app:destination="@id/teamFragment" />
     </fragment>
     <fragment
         android:id="@+id/competitionFragment"
         android:name="com.angelstudio.football.UI.Competitions.CompetitionFragment"
         android:label="CompetitionFragment" />
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.angelstudio.football.UI.Match.MatchFragment"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_match" />
+    <fragment
+        android:id="@+id/teamFragment"
+        android:name="com.angelstudio.football.UI.Team.TeamFragment"
+        android:label="fragment_team"
+        tools:layout="@layout/fragment_team" />
 </navigation>

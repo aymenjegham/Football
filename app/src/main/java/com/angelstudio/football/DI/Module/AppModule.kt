@@ -13,5 +13,4 @@ abstract class AppModule {
   @Binds
   abstract fun bindSchedulerProvider(androidSchedulerProvider: AndroidSchedulerProvider): SchedulerProvider
 
-
-}
+  }
