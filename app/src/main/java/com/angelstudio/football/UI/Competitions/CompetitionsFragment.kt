@@ -13,6 +13,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.angelstudio.football.Model.Status
 import com.angelstudio.football.R
+import com.angelstudio.football.UI.ViewModelFactory
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.fragment_competitions.*
 import javax.inject.Inject
@@ -21,7 +22,7 @@ class CompetitionsFragment : Fragment() {
 
 
     @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
+    lateinit var viewModelFactory: ViewModelFactory//Provider.Factory
 
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)

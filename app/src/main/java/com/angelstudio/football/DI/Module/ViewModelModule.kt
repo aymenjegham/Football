@@ -38,7 +38,7 @@ abstract class ViewModelModule {
   @ViewModelKey(TeamViewModel::class)
   abstract fun bindTeamViewModel(teamViewModel:TeamViewModel): ViewModel
 
-
-  @Binds
-  abstract fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
+//replaced by IntoMap and @Inject ViewModelFactory instead of viewModelProvide.Factory
+//  @Binds
+//  abstract fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
 }

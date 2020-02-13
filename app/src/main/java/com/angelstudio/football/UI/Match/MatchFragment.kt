@@ -11,13 +11,14 @@ import androidx.lifecycle.ViewModelProvider
 
 import com.angelstudio.football.R
 import com.angelstudio.football.UI.Competition.CompetitionViewModel
+import com.angelstudio.football.UI.ViewModelFactory
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
 class MatchFragment : Fragment() {
 
     @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
+    lateinit var viewModelFactory: ViewModelFactory
 
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)

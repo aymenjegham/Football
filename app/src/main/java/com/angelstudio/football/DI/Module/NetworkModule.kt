@@ -1,6 +1,5 @@
 package com.angelstudio.football.DI.Module
 
-import android.util.Log
 import com.angelstudio.football.BuildConfig
 import com.angelstudio.football.Util.scheduler.SchedulerProvider
 import dagger.Module
