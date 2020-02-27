@@ -13,7 +13,6 @@ import com.avi5hek.purrfectapp.base.BaseViewModel
 
 import javax.inject.Inject
 
-
 class CompetitionViewModel
     @Inject
     constructor(private val competitionsRepository: CompetitionsRepository) :BaseViewModel(){

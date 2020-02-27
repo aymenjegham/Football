@@ -25,7 +25,6 @@ class NetworkModule {
         const val READ_TIMEOUT: Long = 60
         const val WRITE_TIMEOUT: Long = 60
         const val API_KEY = BuildConfig.API_KEY
-
     }
 
 
